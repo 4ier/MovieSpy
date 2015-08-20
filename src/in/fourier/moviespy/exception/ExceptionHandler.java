@@ -6,7 +6,6 @@
  */
 package in.fourier.moviespy.exception;
 
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
