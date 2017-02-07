@@ -17,9 +17,7 @@ import java.util.UUID;
  * MovieID varchar(255),<br>
  * MovieName varchar(255),<br>
  * Poster varchar(255),<br>
- * Description varchar(255),<br>
- * Released date,<br>
- * PRIMARY KEY( MovieID, MovieName )<br>
+ * PRIMARY KEY( MovieID )<br>
  * )<br></code>
  * 
  * @author 4ier
@@ -30,16 +28,12 @@ public class MovieEntity extends MetaEntity
     private String MOVIE_ID = "MovieID";
     private String MOVIE_NAME = "MovieName";
     private String POSTER = "Poster";
-    private String DESCRIPTION = "Description";
-    private String RELEASED = "Released";
 
-    public MovieEntity(String movieName, String poster, String description, String released)
+    public MovieEntity(String movieName, String poster)
     {
         this.tableName = "movie_info";
         this.tableFieldMap.put(MOVIE_ID, UUID.nameUUIDFromBytes(movieName.getBytes()).toString());
         this.tableFieldMap.put(MOVIE_NAME, movieName);
         this.tableFieldMap.put(POSTER, poster);
-        this.tableFieldMap.put(DESCRIPTION, description);
-        this.tableFieldMap.put(RELEASED, released);
     }
 }

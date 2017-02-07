@@ -16,7 +16,9 @@ import java.sql.SQLException;
  */
 public interface IDBHelper
 {
-    String DB_PATH = "jdbc:sqlite:db/movie_data.db";
+    String BASE_PATH = "jdbc:sqlite:";
+    String DB_PATH = "db/movie_data_" + System.currentTimeMillis() + ".db";
+    String DB_TEMP_PATH = "db/template.db";
 
     /**
      * 数据入库
@@ -26,8 +28,10 @@ public interface IDBHelper
     void insertEntity(MetaEntity meta) throws SQLException;
 
     /**
-     * 退出
+     * 批量提交
      */
+    void submit() throws SQLException;
+
     void close();
 
 }

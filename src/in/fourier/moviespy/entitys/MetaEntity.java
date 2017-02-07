@@ -39,4 +39,9 @@ public abstract class MetaEntity
     {
         return " REPLACE INTO " + tableName + " VALUES ( " + tableFieldMap.toString() + ") ";
     }
+
+    public FieldMap<String, String> getTableFieldMap()
+    {
+        return this.tableFieldMap;
+    }
 }

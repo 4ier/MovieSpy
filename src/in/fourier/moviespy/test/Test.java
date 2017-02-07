@@ -6,7 +6,7 @@
  */
 package in.fourier.moviespy.test;
 
-import in.fourier.moviespy.lair.MeituanSpider;
+import in.fourier.moviespy.lair.meituan.MeituanSpider;
 
 /**
  * @author 4ier
@@ -23,5 +23,4 @@ public class Test
         MeituanSpider sp = new MeituanSpider();
         sp.predation();
     }
-
 }
